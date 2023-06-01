@@ -1,0 +1,207 @@
+:root{
+    --soft-blue: #F3F5FC;
+    --dark-blue: #0A3871;
+    --soft-grey: #D8DFE8;
+    --grey :    #495057;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+
+}
+body{
+    background-color: #F3F5FC;
+}
+header{
+    width: 100vw;
+    height: 15vh;
+}
+header .logo{
+    width: 32px;
+    height: 48px;
+    position: absolute;
+    top: 24px;
+    left: 16px;
+}
+
+
+main .recepcion-texto{
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+#texto{
+
+    
+    width: 90vw;
+    min-height: 40vh;
+    /* height: auto; */
+    margin-top: 10px;
+    /* height: 10vh; */
+    /* padding: 10px 10px; */
+    border-width: 0;
+    background-color: var(--soft-blue);
+    color: var(--dark-blue);
+    font-size: 3.2rem;
+    outline: none;
+    resize: none;
+    /* white-space: pre-line; */
+    /* overflow-y: hidde; */
+    /* resize: vertical;n */
+    /* text-indent: 0; */
+    /* padding-top: 0;
+    padding-bottom: 0; */
+    /* line-height: 10vh; */
+    /* border: 1px solid var(--dark-blue); */
+    /* vertical-align: top; */
+    
+    
+}
+
+#texto::placeholder{
+    color: #0A3871;
+    /* position: absolute;
+    top:10px;
+    left: 10px; */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+
+}
+
+
+.container-buttons{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 64px;
+}
+
+.container-buttons p{
+    display: inline-block;
+    width: 320px;
+    height: 18px;
+    font-size: 1.2rem;
+}
+
+.container-buttons span{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url('assets/iconos/Vector.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 8px   ;
+}
+
+.container-buttons button{
+    height: 67px;
+    width: 343px;
+    border-radius: 24px;
+    padding: 24px;
+    font-size: 1.6rem;
+
+}
+.container-buttons .container-buttons--warning{
+    margin-bottom: 16px;
+}
+
+#encriptar{
+    margin-bottom: 24px;
+    background-color: var(--dark-blue);
+    color: #FFFF;
+    border-width: 0;
+}
+#descifrar{
+    background-color: var(--soft-blue);
+    border: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
+}
+
+main .container-answer{
+    
+    width: 327px;
+    min-height: 186px;
+    border-radius: 32px;
+    background-color: #ffff;
+    margin: 0 auto;
+    margin-top: 64px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container-answer .answer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    color: var(--grey);
+}
+.container-answer .answer .answer-answer{
+    /* display: none; */
+    width: 70vw;
+    min-height: 10vh;
+    margin: 32px;
+    word-wrap: break-word;
+    display: none;
+
+}
+.container-answer .answer-button{
+
+    width: 70vw;
+    height: 67px;
+    display: none;
+    border-radius: 24px;
+    border: 1px solid var(--dark-blue);
+    margin-bottom: 32px;
+    background-color: #FFFFFF;
+    color: var(--dark-blue);
+
+
+}
+
+.answer .answer-warning{
+    width: 100%;
+    height: 58px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.answer .answer-suggestion{
+    width: 263px;
+    height: 48px;
+    color: var(--grey);
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.answer .help{
+    display: block;
+}
+
+

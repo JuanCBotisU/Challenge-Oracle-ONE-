@@ -6,13 +6,42 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Encriptador</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
+        <header>
+            <figure class="logo">
+                <img src="CSS/assets/img/Vector.svg" alt="logo de alura">
+            </figure>
+        </header>
         <main>
-            <input type="text" name="texto" id="texto" style="width: 500px; height: 400px;">
-            <button id="encriptar">Encriptar</button>
-            <button id="descifrar">Descifrar</button>
+            
+                <section class="recepcion-texto">
+                    <!-- <input type="text" name="texto" placeholder="Ingrese el texto"> -->
+                    <textarea  id="texto"  placeholder="Ingrese el texto aqui"></textarea>
+    
+                    <div class="container-buttons">
+                            <div class="container-buttons--warning">
+                                <span></span><p>Solo letras minusculas y sin acentos</p>
+                            </div>
+                            <button id="encriptar">Encriptar</button>
+                            <button id="descifrar">Descifrar</button>      
+                    </div>
+                </section>
+                <section class="container-answer">
+                    <div class="answer">
+                        <div class="answer-answer" id="answer"></div>
+                        <button class="answer-button" id="answer-button">Copiar</button>
+                        <p class="answer-warning help">Ningun mensaje fue encontrado</p>
+                        <p class="answer-suggestion help">Ingresa el texto que deses encriptar o desencriptar</p>
+                    </div>
+                    
+                </section>
+
+            
             
         </main>
         <footer>
