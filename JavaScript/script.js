@@ -6,6 +6,9 @@ let texto = document.getElementById("texto");
 let answer = document.getElementById("answer");
 let warning = document.getElementsByClassName("help");
 let button = document.getElementById("answer-button");
+let contenedor = document.getElementsByClassName("answer");
+
+
 
 
 const palabras = ["ai", "enter","imes", "ober", "ufat" ];
@@ -16,10 +19,6 @@ descifrarButton.addEventListener("click", descifrar);
 button.addEventListener("click", copiarTexto);
 texto.addEventListener("input", agrandar);
 
-
-function hola(){
-    alert(texto.value);
-}
 function agrandar(){
     // texto.style.height = "auto"; // Restablecer la altura a 'auto' para obtener la altura del contenido
     texto.style.height = texto.scrollHeight + "px"; 
@@ -29,6 +28,7 @@ function agrandar(){
 function aparicionRespuesta(){
     button.style.display = "block";
     answer.style.display = "block";
+    contenedor[0].style.justifyContent = "center";
 }
 
 function desaparicionRespuesta(){
@@ -37,12 +37,17 @@ function desaparicionRespuesta(){
 }
 
 function desaparacionAlertas(){
-    warning[0].style.display = "none";
-    warning[1].style.display = "none";
+   for (let i = 0; i < warning.length; i++) {
+    warning[i].style.display = "none";
+    
+   }
+   
 }
 function apareicionAlertas(){
-    warning[0].style.display = "block";
-    warning[1].style.display = "block";
+    for (let i = 0; i < warning.length; i++) {
+        warning[i].style.display = "block";
+    }
+    contenedor[0].style.justifyContent = "spacen-between";
 }
 
 
@@ -81,23 +86,33 @@ function encriptar(){
 }
 
 function descifrar(){
-    var text =  texto.textContent;
-    var separado;
-    for(var i = 0; i < palabras.length; i++){
-        separado = text.split(palabras[i]);
-        if(separado.length > 1){
-            text = separado.join(remplazo[i]);
+    var text =  texto.value;
+    
+    if (text != "") {
+        
+        var separado;
+        for(var i = 0; i < palabras.length; i++){
+            separado = text.split(palabras[i]);
+            if(separado.length > 1){
+                text = separado.join(remplazo[i]);
+            }
         }
+        
+        answer.textContent = text;
+        desaparacionAlertas();
+        aparicionRespuesta();
+    } else {
+        desaparicionRespuesta();
+        apareicionAlertas();
     }
-    answer.textContent = text;
 }
 
 function copiarTexto() {
     var range = document.createRange();
-  range.selectNode(answer);
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(range);
-  document.execCommand("copy");
+    range.selectNode(answer);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
     alert("Texto copiado al portapapeles: " + answer.textContent);
-  }
+}
 

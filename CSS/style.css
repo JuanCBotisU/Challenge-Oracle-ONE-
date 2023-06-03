@@ -113,21 +113,35 @@ main .recepcion-texto{
 .container-buttons button{
     height: 67px;
     width: 343px;
-    border-radius: 24px;
-    padding: 24px;
+    border-radius: 24px;    
     font-size: 1.6rem;
 
 }
+
+
 .container-buttons .container-buttons--warning{
     margin-bottom: 16px;
+    display: flex;
 }
 
-#encriptar{
+.container-buttons .container-buttons--buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-buttons--buttons button:first-of-type{
     margin-bottom: 24px;
     background-color: var(--dark-blue);
     color: #FFFF;
     border-width: 0;
 }
+
+/* #encriptar{
+    margin-bottom: 24px;
+    background-color: var(--dark-blue);
+    color: #FFFF;
+    border-width: 0;
+} */
 #descifrar{
     background-color: var(--soft-blue);
     border: 1px solid var(--dark-blue);
@@ -136,7 +150,7 @@ main .recepcion-texto{
 
 main .container-answer{
     
-    width: 327px;
+    width: 87.2vw; 
     min-height: 186px;
     border-radius: 32px;
     background-color: #ffff;
@@ -147,6 +161,7 @@ main .container-answer{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 .container-answer .answer{
     width: 100%;
@@ -157,6 +172,7 @@ main .container-answer{
     align-items: center;
     font-size: 2.4rem;
     color: var(--grey);
+    
 }
 .container-answer .answer .answer-answer{
     /* display: none; */
@@ -189,6 +205,10 @@ main .container-answer{
     text-align: center;
     margin-bottom: 16px;
 }
+.answer .answer-muñeco{
+    width: 0;
+    height: 0;
+}
 
 .answer .answer-suggestion{
     width: 263px;
@@ -205,3 +225,122 @@ main .container-answer{
 }
 
 
+@media (min-width: 768px){
+
+    
+    .recepcion-texto{
+         margin-top: 120px
+       }
+    header .logo{
+        top: 72px;
+        left: 40px; 
+    }
+    header{
+        height: 18vh;
+    }
+    
+    .answer .answer-suggestion{
+        width: 100%;
+    }
+       .answer .answer-warning{
+        height: 24px;
+    }
+    .container-answer .answer .answer-answer{
+        width: 91%;
+    }
+    
+    
+    .container-buttons .container-buttons--buttons{
+        display: flex;
+        flex-direction: row;
+    }
+    .container-buttons button{
+        width: 332px;
+        margin: 0;
+    }
+    #encriptar{        
+        margin-bottom: 0;
+        margin-right: 24px;
+    }
+    main .container-answer{
+         min-height: 133px;
+    }
+   .container-buttons--warning{
+        width: 688px;
+   }
+   .container-answer .answer-suggestion{
+    height: 24px;
+   }
+   
+}
+
+@media (min-width: 1440px) {
+
+    header{
+        height: 10vh;
+    }
+
+    header .logo{
+        top: 40px;
+        left: 84px;
+    }
+    main{
+        height: 90vh;
+        display: flex;
+        
+
+    }
+    main .recepcion-texto{
+        width: 70vw;
+        margin-top: 80px;
+        justify-content: space-between;
+
+    }
+    #texto{
+        width: 680px;
+        height: 288px;
+    }
+    main .container-answer{
+        width: 27.7vw;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        bottom: 40px;
+        margin: 0px;
+        
+    }
+
+    .answer .answer-button{
+        width: 336px;
+        height: 67px;
+    }
+    main .container-answer .container-buttons{
+        width: auto;
+    }
+
+    
+    .recepcion-texto .container-buttons{
+        margin-bottom: 70px;
+    }
+
+    .container-answer .answer{
+        justify-content: center;
+    }
+    .answer .answer-answer{
+        height: 690px;
+        overflow-y: scroll;
+    }
+    .answer .answer-answer{
+        height: 77.5%;
+    }
+
+    .answer .answer-suggestion, .answer .answer-warning{
+        width: 336px;
+        height: auto;
+    }
+
+   .answer .answer-muñeco{
+        width: auto;
+        height: auto;
+   }
+}
